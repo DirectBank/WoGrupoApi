@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/config/envProd
+/.env
+/.vscode
+/node_modules
+.vs
+ecosystem.config.js
+certificate.pem
+privatekey.pem
+/certificate.crt
+/privatekey.key
+/key.json
+/key_old.json

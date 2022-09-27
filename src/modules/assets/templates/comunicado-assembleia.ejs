@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+<head> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu documento</title>
+</head>
+<body style="margin: 0;padding: 0;background-color: #dddddd;">
+
+	<div class="container" style="width: 540px;height: auto;text-align: center;margin: 0 auto;">
+    	<div class='header' style="background: #FECC02;background-image: linear-gradient(-45deg, #FECC02, #F4C401);padding: 20px;width: 500px;margin:30px auto 0;border-radius: 20px 20px 0px 0px;">
+        <h1 style="font-size: 26px;color: black;text-align: center;margin: 0;">Nova Assembleia Virtual disponível!</h1>
+		</div>
+		<div class='corpo' style="background-color: white;width: 540px;height: auto;text-align: center;margin: auto; padding:20px 0;">
+			<p style="padding-top: 10px;line-height: 1.6; margin: 0;color: black;"><strong style="font-size: 26px;">Prezado Cond&ocirc;mino,</strong><br>
+				<%=nome%><br>
+			</p>
+			<table style="width: 450px;margin: auto;padding-top: 5px;">
+				<thead>
+					<tr>
+						<th colspan='2' class='detalhes' style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 10px 0px;text-align: center;color: black;border-radius: 6px;font-size: 18px;letter-spacing: 0.1em;">Detalhes</th>
+					</tr>
+				</thead>
+				<tr>
+					<th style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 7px 20px;text-align: center;color: black;border-radius: 6px;font-size: 14px;letter-spacing: 0.1em;">Edif&iacute;cio</th>
+					<td style="font-size: 12px;padding: 7px 20px;margin: 0px 5px;text-align: left;background-color: #e3e3e3;border-radius: 6px;color: black;"><%=edificio%></td>
+				</tr>
+				<tr>
+					<th style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 7px 20px;text-align: center;color: black;border-radius: 6px;font-size: 14px;letter-spacing: 0.1em;">Descri&ccedil;&atilde;o</th>
+					<td style="font-size: 12px;padding: 7px 20px;margin: 0px 5px;text-align: left;background-color: #e3e3e3;border-radius: 6px;color: black;"><%=descricaoAssembleia%></td>
+				</tr>
+				<!-- <tr>
+					<th style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 7px 20px;text-align: center;color: black;border-radius: 6px;font-size: 14px;letter-spacing: 0.1em;">Documento</th>
+					<td style="font-size: 12px;padding: 7px 20px;margin: 0px 5px;text-align: left;background-color: #e3e3e3;border-radius: 6px;color: black;">__________</td>
+				</tr> -->
+				<tr>
+					<th style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 7px 20px;text-align: center;color: black;border-radius: 6px;font-size: 14px;letter-spacing: 0.1em;">Data &Iacute;nicio</th>
+					<td style="font-size: 12px;padding: 7px 20px;margin: 0px 5px;text-align: left;background-color: #e3e3e3;border-radius: 6px;color: black;"><%=dataInicio%></td>
+				</tr>
+				<tr>
+					<th style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 7px 20px;text-align: center;color: black;border-radius: 6px;font-size: 14px;letter-spacing: 0.1em;">Primeira Chamada</th>
+					<td style="font-size: 12px;padding: 7px 20px;margin: 0px 5px;text-align: left;background-color: #e3e3e3;border-radius: 6px;color: black;"><%=hora1%></td>
+				</tr>
+				<tr>
+					<th style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 7px 20px;text-align: center;color: black;border-radius: 6px;font-size: 14px;letter-spacing: 0.1em;">Segunda Chamada</th>
+					<td style="font-size: 12px;padding: 7px 20px;margin: 0px 5px;text-align: left;background-color: #e3e3e3;border-radius: 6px;color: black;"><%=hora2%></td>
+				</tr>
+				<tr>
+					<th style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 7px 20px;text-align: center;color: black;border-radius: 6px;font-size: 14px;letter-spacing: 0.1em;">Link da Reuni&atilde;o</th>
+					<td style="font-size: 12px;padding: 7px 20px;margin: 0px 5px;text-align: left;background-color: #e3e3e3;border-radius: 6px;color:#F4C401;">
+                  <a style="color: black;text-align: left;font-size: 12px;font-weight: bold;" href=""><%=linkReuniao%></a></td>
+				</tr>
+				
+				<tr>
+					<th colspan='2' class='Assuntos' style="background: #F4C401;background-image: linear-gradient(0deg, #FECC02, #F4C401);padding: 10px 0px;text-align: center;color: black;border-radius: 6px;font-size: 18px;letter-spacing: 0.1em;">Assuntos</th>
+				</tr>
+				<tr>
+					<td colspan='2' style="padding: 7px 20px;margin: 0px 5px;text-align: left;background-color: #e3e3e3;border-radius: 6px;color: black;">
+						__________<br>
+						__________<br>
+						__________<br>
+					</td>
+				</tr>
+				
+				
+				
+			</table>
+			<br/>
+			<p style='padding: 0px;line-height: 1.6; margin: 0;color: black;'>Para participar acesse nosso aplicativo Omeupredio Plus<br/>
+				<a href="https://www.omeupredio.com.br/" target="_blank" style="cursor: pointer;text-decoration: underline;color:black;font-size: 18px; font-weight: bold;">Google Play </a> 
+				<a href="https://www.omeupredio.com.br/" target="_blank" style="cursor: pointer;text-decoration: underline;color:black;font-size: 18px; font-weight: bold;">Apple Store </a>
+			</p><br/>
+
+		</div>
+		<div class='footer' style="background: #F4C401;width: 540px;height: auto;margin: 0 auto 30px;border-radius: 0 0 20px 20px;">
+			<p style="color: black;font-weight: bold;font-size: 12px;line-height: 1.4;text-align: center; margin: 0; padding: 20px 0;"><strong>Em caso de dúvidas, entre em contato abaixo:<br>Telefone: (13) 3284-5566<br>e-mail: suporte@prg.com.br<br></strong>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
