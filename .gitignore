@@ -3,6 +3,7 @@
 ################################################################################
 
 /src/config/envProd
+/src/modules/drive/workoffice-drive-firebase-adminsdk.json
 /.env
 /.vscode
 /node_modules
