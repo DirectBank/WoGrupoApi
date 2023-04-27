@@ -1,12 +1,12 @@
 // Monitoramento da API via APM ELK
 const { env } = require('process');
-var apm = require('elastic-apm-node').start({
-    serviceName: 'WoGrupoApi',
-    secretToken: 'iAX9cbq8BlB1jYn84B',
-    serverUrl: 'https://d28f68aee7874851b01293f63b065dd9.apm.westus2.azure.elastic-cloud.com:443',
-    environment: env.NODE_ENV,
-    captureBody: 'all'
-});
+// var apm = require('elastic-apm-node').start({
+//     serviceName: 'WoGrupoApi',
+//     secretToken: 'iAX9cbq8BlB1jYn84B',
+//     serverUrl: 'https://d28f68aee7874851b01293f63b065dd9.apm.westus2.azure.elastic-cloud.com:443',
+//     environment: env.NODE_ENV,
+//     captureBody: 'all'
+// });
 
 const app = require('express')();
 const https = require('https');
@@ -42,16 +42,16 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use((req, res, next) => {
-    res.on('finish', () => {
-        if (apm.currentTransaction) {
-            apm.currentTransaction.addLabels({ resposeBody: res.responseBody });
-        }
-        // console.log(apm.currentTransaction.ids)
+// app.use((req, res, next) => {
+//     res.on('finish', () => {
+//         if (apm.currentTransaction) {
+//             apm.currentTransaction.addLabels({ resposeBody: res.responseBody });
+//         }
+//         // console.log(apm.currentTransaction.ids)
 
-    });
-    next();
-});
+//     });
+//     next();
+// });
 
 
 app.use('/wo', routes);

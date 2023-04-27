@@ -3,7 +3,7 @@ const TYPES = require('tedious').TYPES;
 const Request = require('tedious').Request;
 var pktJson = require('./../../../package.json');
 const OFICIAL = process.env.OFICIAL; //VARIAVEL PARA TROCAR A BASE DE DADOS
-var apm = require('elastic-apm-node')
+// var apm = require('elastic-apm-node')
 
 const configConexao = (produto, oficial) => {
 
@@ -70,25 +70,25 @@ const buildRequest = (procName, [...params], resolve, reject, connection) => {
             }
 
             // Adiciona os campos ao APM ELK
-            if (apm.currentTransaction) {
+            // if (apm.currentTransaction) {
 
-                if (param['nome'] == "id_empresa") {
-                    apm.currentTransaction.addLabels({ id_empresa: param['valor'] });
-                } else if (param['nome'] == "id_cliente") {
-                    apm.currentTransaction.addLabels({ id_cliente: param['valor'] });
-                } else if (param['nome'] == "id_usuario") {
-                    apm.currentTransaction.addLabels({ id_usuario: param['valor'] });
-                }
-            }
-            query += params.indexOf(param) < params.length - 1 ? `@${param['nome']}='${param['valor']}', ` : `@${param['nome']}='${param['valor']}'`
+            //     if (param['nome'] == "id_empresa") {
+            //         apm.currentTransaction.addLabels({ id_empresa: param['valor'] });
+            //     } else if (param['nome'] == "id_cliente") {
+            //         apm.currentTransaction.addLabels({ id_cliente: param['valor'] });
+            //     } else if (param['nome'] == "id_usuario") {
+            //         apm.currentTransaction.addLabels({ id_usuario: param['valor'] });
+            //     }
+            // }
+            // query += params.indexOf(param) < params.length - 1 ? `@${param['nome']}='${param['valor']}', ` : `@${param['nome']}='${param['valor']}'`
 
 
         }
         // Adiciona a Label no ELK
-        if (apm.currentTransaction) {
-            // console.log(apm.currentTransaction.addLabels)
-            apm.currentTransaction.addLabels({ sqlCommand: query })
-        }
+        // if (apm.currentTransaction) {
+        //     // console.log(apm.currentTransaction.addLabels)
+        //     apm.currentTransaction.addLabels({ sqlCommand: query })
+        // }
 
         request.on('returnValue', async (parameterName, value, metadata) => {
             this.outputParameter = (outputParameter == undefined ? {} : outputParameter);
